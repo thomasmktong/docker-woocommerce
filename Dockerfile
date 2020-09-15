@@ -10,3 +10,12 @@ RUN apt-get update \
     && unzip /tmp/temp.zip \
     && rm /tmp/temp.zip \
     && rm -rf /var/lib/apt/lists/*
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends unzip wget \
+    && wget https://downloads.wordpress.org/plugin/crypto-com-pay-checkout-for-woocommerce.1.0.1.zip -O /tmp/temp2.zip \
+    && cd /usr/src/wordpress/wp-content/plugins \
+    && unzip /tmp/temp2.zip \
+    && rm /tmp/temp2.zip \
+    && rm -rf /var/lib/apt/lists/*
+
