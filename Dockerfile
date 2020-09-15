@@ -19,3 +19,4 @@ RUN apt-get update \
     && rm /tmp/temp2.zip \
     && rm -rf /var/lib/apt/lists/*
 
+COPY wp-sethost.sh /tmp/
