@@ -20,3 +20,4 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 COPY wp-sethost.sh /tmp/
+COPY wp-cryptocom-sethost.sh /tmp/
