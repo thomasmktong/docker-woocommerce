@@ -10,6 +10,9 @@ dbserver:
     container_name: woo_mariadb
     image: mariadb
     environment:
-     MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
+        MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
+        MYSQL_DATABASE: "wordpress"
+        MYSQL_USER: "${MYSQL_USER}"
+        MYSQL_PASSWORD: "${MYSQL_PASSWORD}"
     ports:
      - 3307:3306
